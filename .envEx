@@ -1,0 +1,5 @@
+PORT=5000
+MONGO_URL=mongodb+srv://rakib:rakib9090@cluster0.zqlov.mongodb.net/daruchini?retryWrites=true&w=majority
+PASS_SEC=_daruchini
+JWT_SEC=_daruchini
+STIPE_KEY=sk_test_51IeI82DajAFn8IvdcXCjCjQneChUSg3JTla2RnqJvjW7KtSUMcHTFRb8mdYB0rsKM2W4qEIHDU5MMpjBPYiRbM2600iTW0S2Yh
