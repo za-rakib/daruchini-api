@@ -29,7 +29,8 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ userName: req.body.userName });
-  //  console.log(user);
+    console.log(user);
+
     if (!user) {
       return res.status(401).json("User is not found");
     }
@@ -44,14 +45,6 @@ router.post("/login", async (req, res) => {
       return res.status(401).json("Password is wrong");
     }
 
-    // const accessToken = jwt.sign(
-    //   {
-    //     id: user._id,
-    //     isAdmin: user.isAdmin,
-    //   },
-    //   process.env.JWT_SEC,
-    //   { expiresIn: "2w" }
-    // );
 
     const { password, ...others } = user._doc;
     res.status(200).json({ ...others});
